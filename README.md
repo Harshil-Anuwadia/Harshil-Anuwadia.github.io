@@ -12,7 +12,6 @@ BrainDrop is a platform that offers AI model training services to businesses and
 - [Model Deployment](#model-deployment)
 - [API & SDK](#api--sdk)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
