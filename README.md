@@ -55,6 +55,3 @@ Our API and SDK provide seamless integration with popular programming languages 
 
 We welcome contributions from the community to help improve BrainDrop. If you have ideas for new features, bug fixes, or other improvements, please feel free to submit a pull request or open an issue on our GitHub repository.
 
-## License
-
-BrainDrop is released under the [APACHE LINCENSE](LICENSE)." 
