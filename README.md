@@ -1,4 +1,4 @@
-![BrainDrop Logo](https://BrainDrop.me/icons8-heygen-1024.png)
+![BrainDrop Logo](https://braindrop.me/assets/Img/icons8-heygen-1024.png)
 
 BrainDrop is a platform that offers AI model training services to businesses and developers. Our platform allows you to upload your data, including photos, videos, and audio, which we then use to train custom AI models tailored to your needs.
 
