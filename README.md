@@ -55,3 +55,5 @@ Our API and SDK provide seamless integration with popular programming languages 
 We welcome contributions from the community to help improve BrainDrop. If you have ideas for new features, bug fixes, or other improvements, please feel free to submit a pull request or open an issue on our GitHub repository.
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/harshilanuwadia)
+
+[Follow me on LinkedIn] (https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=harshilanuwadia)
