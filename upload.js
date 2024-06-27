@@ -15,10 +15,10 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
         const content = btoa(event.target.result); // Base64 encode the file content
 
         const fileName = file.name;
-        const githubToken = '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';
+        const githubToken = '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';
         const repoOwner = 'Harshil-Anuwadia';
         const repoName = 'Cloud';
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${fileName}`;
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/${fileName}`;
 
         const response = await fetch(apiUrl, {
             method: 'PUT',
