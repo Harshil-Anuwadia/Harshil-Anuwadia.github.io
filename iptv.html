@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Online Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            width: 300px;
+        }
+        button {
+            padding: 10px;
+        }
+        #playlistContainer {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        #videoContainer {
+            margin-top: 20px;
+        }
+        .video-js {
+            width: 100%;
+            height: auto;
+        }
+        .channel-button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .channel-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IPTV Online Player</h1>
+        <input type="text" id="urlInput" placeholder="Enter m3u Playlist URL">
+        <button onclick="loadPlaylist()">Load Playlist</button>
+        <div id="playlistContainer"></div>
+        <div id="videoContainer">
+            <video id="videoPlayer" controls class="video-js"></video>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        async function loadPlaylist() {
+            const urlInput = document.getElementById('urlInput').value;
+            const playlistContainer = document.getElementById('playlistContainer');
+
+            try {
+                const response = await fetch(urlInput);
+                const text = await response.text();
+                let channels = parseM3U(text);
+
+                // Sort channels alphabetically by name
+                channels.sort((a, b) => a.name.localeCompare(b.name));
+
+                playlistContainer.innerHTML = '';
+                channels.forEach((channel, index) => {
+                    const button = document.createElement('button');
+                    button.textContent = channel.name || `Stream ${index + 1}`;
+                    button.className = 'channel-button';
+                    button.onclick = () => playVideo(channel.url);
+                    playlistContainer.appendChild(button);
+                });
+            } catch (error) {
+                alert('Failed to load the playlist.');
+                console.error(error);
+            }
+        }
+
+        function parseM3U(text) {
+            const lines = text.split('\n');
+            const channels = [];
+            let currentChannel = {};
+
+            for (let line of lines) {
+                line = line.trim();
+                if (line.startsWith('#EXTINF')) {
+                    const nameMatch = line.match(/,(.+)/);
+                    if (nameMatch) {
+                        currentChannel.name = nameMatch[1];
+                    }
+                } else if (line && !line.startsWith('#')) {
+                    currentChannel.url = line;
+                    channels.push(currentChannel);
+                    currentChannel = {};
+                }
+            }
+            return channels;
+        }
+
+        function playVideo(url) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(videoPlayer);
+                hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                    videoPlayer.play();
+                    scrollVideoContainer();
+                });
+                hls.on(Hls.Events.ERROR, function (event, data) {
+                    if (data.fatal) {
+                        switch (data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                console.error('Network error');
+                                hls.startLoad();
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.error('Media error');
+                                hls.recoverMediaError();
+                                break;
+                            default:
+                                hls.destroy();
+                                break;
+                        }
+                    }
+                });
+            } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                videoPlayer.src = url;
+                videoPlayer.addEventListener('loadedmetadata', function () {
+                    videoPlayer.play();
+                    scrollVideoContainer();
+                });
+            } else {
+                alert('HLS is not supported in this browser.');
+            }
+        }
+
+        function scrollVideoContainer() {
+            const videoContainer = document.getElementById('videoContainer');
+            videoContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
