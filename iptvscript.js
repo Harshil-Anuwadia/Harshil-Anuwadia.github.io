@@ -3,9 +3,15 @@ let channels = []; // Global variable to store parsed channels
 
 async function loadPlaylist(url) {
     const playlistUrl = url || document.getElementById('urlInput').value;
-    const playlistContainer = document.getElementById('playlistContainer');
 
     try {
+        // Check if the URL ends with '.m3u8'
+        if (playlistUrl.endsWith('.m3u8')) {
+            playVideo(playlistUrl);
+            return;
+        }
+
+        // Fetch and process '.m3u' playlist
         const response = await fetch(playlistUrl);
         const text = await response.text();
 
@@ -16,8 +22,6 @@ async function loadPlaylist(url) {
             channels.sort((a, b) => a.name.localeCompare(b.name));
 
             renderChannels(channels);
-        } else if (playlistUrl.endsWith('.m3u8')) {
-            playVideo(playlistUrl);
         } else {
             alert('Invalid playlist or channel URL.');
         }
@@ -109,6 +113,7 @@ function closePopup() {
 
 function playVideo(url) {
     const videoPlayer = document.getElementById('videoPlayer');
+    
     if (Hls.isSupported()) {
         const hls = new Hls({
             liveSyncDurationCount: 3,
@@ -171,4 +176,4 @@ function clearFilters() {
     document.getElementById('searchInput').value = '';
     document.getElementById('categoryFilter').value = '';
     renderChannels(channels);
-            }
+}
