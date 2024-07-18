@@ -1,179 +1,54 @@
-const defaultPlaylistUrl = "https://braindrop.me/defaultm3uplaylist.m3u";
-let channels = []; // Global variable to store parsed channels
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Online Player</title>
+    <link rel="stylesheet" href="iptvcss.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IPTV Online Player</h1>
+        <div>
+            <input type="text" id="urlInput" placeholder="Enter M3U or M3U8 URL">
+            <button onclick="loadPlaylist()">Load</button>
+            <button onclick="loadDefaultPlaylist()">Load Default Playlist</button>
+        </div>
+        <br>
+        <div>
+            <input type="text" id="searchInput" placeholder="Search channels">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="News">News</option>
+                <option value="Sports">Sports</option>
+                <option value="Entertainment">Entertainment</option>
+                <!-- Add more options based on available categories -->
+            </select>
+            <button onclick="filterChannels()">Apply Filters</button>
+            <button onclick="clearFilters()">Clear Filters</button>
+        </div>
 
-async function loadPlaylist(url) {
-    const playlistUrl = url || document.getElementById('urlInput').value;
+        <div id="playlistContainer"></div>
 
-    try {
-        // Check if the URL ends with '.m3u8'
-        if (playlistUrl.endsWith('.m3u8')) {
-            playVideo(playlistUrl);
-            return;
-        }
+        <div id="videoContainer">
+            <video id="videoPlayer" controls class="video-js"></video>
+        </div>
 
-        // Fetch and process '.m3u' playlist
-        const response = await fetch(playlistUrl);
-        const text = await response.text();
+        <!-- Popup for channel information and confirmation -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2 id="channelName"></h2>
+                <p id="channelInfo"></p>
+                <p>Are you sure you want to stream this channel?</p>
+                <div class="popup-buttons">
+                    <button id="confirmButton">Yes</button>
+                    <button onclick="closePopup()">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        if (playlistUrl.endsWith('.m3u')) {
-            channels = parseM3U(text);
-
-            // Sort channels alphabetically by name
-            channels.sort((a, b) => a.name.localeCompare(b.name));
-
-            renderChannels(channels);
-        } else {
-            alert('Invalid playlist or channel URL.');
-        }
-    } catch (error) {
-        alert('Failed to load the playlist.');
-        console.error(error);
-    }
-}
-
-function loadDefaultPlaylist() {
-    loadPlaylist(defaultPlaylistUrl);
-}
-
-function parseM3U(text) {
-    const lines = text.split('\n');
-    const parsedChannels = [];
-    let currentChannel = {};
-
-    for (let line of lines) {
-        line = line.trim();
-        if (line.startsWith('#EXTINF')) {
-            const nameMatch = line.match(/,(.+)/);
-            if (nameMatch) {
-                currentChannel.name = nameMatch[1];
-            }
-            const logoMatch = line.match(/tvg-logo="([^"]+)"/);
-            if (logoMatch) {
-                currentChannel.logo = logoMatch[1];
-            }
-            const categoryMatch = line.match(/group-title="([^"]+)"/);
-            if (categoryMatch) {
-                currentChannel.category = categoryMatch[1];
-            }
-        } else if (line && !line.startsWith('#')) {
-            currentChannel.url = line;
-            parsedChannels.push(currentChannel);
-            currentChannel = {};
-        }
-    }
-    return parsedChannels;
-}
-
-function renderChannels(channelsToRender) {
-    const playlistContainer = document.getElementById('playlistContainer');
-    playlistContainer.innerHTML = '';
-
-    channelsToRender.forEach((channel, index) => {
-        const div = document.createElement('div');
-        div.className = 'channel-item';
-        div.onclick = () => showPopup(channel);
-
-        const img = document.createElement('img');
-        img.src = channel.logo || 'default-logo.png'; // Default logo if none provided
-        img.alt = 'Channel Logo';
-
-        const span = document.createElement('span');
-        span.textContent = channel.name || `Stream ${index + 1}`;
-
-        div.appendChild(img);
-        div.appendChild(span);
-        playlistContainer.appendChild(div);
-    });
-}
-
-function showPopup(channel) {
-    const popup = document.getElementById('popup');
-    const channelName = document.getElementById('channelName');
-    const channelInfo = document.getElementById('channelInfo');
-    const confirmButton = document.getElementById('confirmButton');
-
-    channelName.textContent = channel.name || 'Unknown Channel';
-    channelInfo.innerHTML = `
-        <img src="${channel.logo || 'default-logo.png'}" alt="Channel Logo" style="width:50px;height:50px;"><br>
-        URL: ${channel.url}
-    `;
-
-    confirmButton.onclick = () => {
-        playVideo(channel.url);
-        closePopup();
-    };
-
-    popup.style.display = 'flex';
-}
-
-function closePopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'none';
-}
-
-function playVideo(url) {
-    const videoPlayer = document.getElementById('videoPlayer');
-    
-    if (Hls.isSupported()) {
-        const hls = new Hls({
-            liveSyncDurationCount: 3,
-            enableWorker: true,
-            debug: false
-        });
-        hls.loadSource(url);
-        hls.attachMedia(videoPlayer);
-        hls.on(Hls.Events.MANIFEST_PARSED, function () {
-            videoPlayer.play();
-            scrollVideoContainer();
-        });
-        hls.on(Hls.Events.ERROR, function (event, data) {
-            if (data.fatal) {
-                switch (data.type) {
-                    case Hls.ErrorTypes.NETWORK_ERROR:
-                        console.error('Network error');
-                        hls.startLoad();
-                        break;
-                    case Hls.ErrorTypes.MEDIA_ERROR:
-                        console.error('Media error');
-                        hls.recoverMediaError();
-                        break;
-                    default:
-                        hls.destroy();
-                        break;
-                }
-            }
-        });
-    } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
-        videoPlayer.src = url;
-        videoPlayer.addEventListener('loadedmetadata', function () {
-            videoPlayer.play();
-            scrollVideoContainer();
-        });
-    } else {
-        alert('HLS is not supported in this browser.');
-    }
-}
-
-function scrollVideoContainer() {
-    const videoContainer = document.getElementById('videoContainer');
-    videoContainer.scrollIntoView({ behavior: 'smooth' });
-}
-
-function filterChannels() {
-    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-    const categoryFilter = document.getElementById('categoryFilter').value.toLowerCase();
-
-    let filteredChannels = channels.filter(channel => {
-        const matchesSearch = channel.name.toLowerCase().includes(searchQuery);
-        const matchesCategory = categoryFilter === '' || channel.category.toLowerCase() === categoryFilter;
-        return matchesSearch && matchesCategory;
-    });
-
-    renderChannels(filteredChannels);
-}
-
-function clearFilters() {
-    document.getElementById('searchInput').value = '';
-    document.getElementById('categoryFilter').value = '';
-    renderChannels(channels);
-}
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="iptvscript.js"></script>
+</body>
+</html>
