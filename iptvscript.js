@@ -11,11 +11,12 @@ async function loadPlaylist(url) {
             return;
         }
 
-        // Fetch and process '.m3u' playlist
-        const response = await fetch(playlistUrl);
-        const text = await response.text();
+      
 
         if (playlistUrl.endsWith('.m3u')) {
+            // Fetch and process '.m3u' playlist
+            const response = await fetch(playlistUrl);
+            const text = await response.text();
             channels = parseM3U(text);
 
             // Sort channels alphabetically by name
