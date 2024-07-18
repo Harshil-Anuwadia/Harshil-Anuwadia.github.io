@@ -11,12 +11,11 @@ async function loadPlaylist(url) {
             return;
         }
 
-      
+        // Fetch and process '.m3u' playlist
+        const response = await fetch(playlistUrl);
+        const text = await response.text();
 
         if (playlistUrl.endsWith('.m3u')) {
-            // Fetch and process '.m3u' playlist
-            const response = await fetch(playlistUrl);
-            const text = await response.text();
             channels = parseM3U(text);
 
             // Sort channels alphabetically by name
@@ -119,7 +118,7 @@ function playVideo(url) {
         const hls = new Hls({
             liveSyncDurationCount: 3,
             enableWorker: true,
-            debug: false
+            debug: true // Enable debug mode for detailed logs
         });
         hls.loadSource(url);
         hls.attachMedia(videoPlayer);
@@ -128,6 +127,7 @@ function playVideo(url) {
             scrollVideoContainer();
         });
         hls.on(Hls.Events.ERROR, function (event, data) {
+            console.error('HLS.js error', data); // Log detailed error information
             if (data.fatal) {
                 switch (data.type) {
                     case Hls.ErrorTypes.NETWORK_ERROR:
