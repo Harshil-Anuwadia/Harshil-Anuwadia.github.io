@@ -15,7 +15,7 @@ BrainDrop is a platform that offers AI model training services to businesses and
 
 ## About
 
-BrainDrop aims make AI model training accessible and  for businesses of all sizes. Whether you're looking to improve customer service with chatbots, enhance image recognition in your app, or analyze large datasets, BrainDrop help you build and deploy AI models efficiently.
+BrainDrop aims to make AI model training accessible and affordable for businesses of all sizes. Whether you're looking to improve customer service with chatbots, enhance image recognition in your app, or analyze large datasets, BrainDrop helps you build and deploy AI models efficiently.
 
 ## Key Features
 
@@ -27,9 +27,9 @@ BrainDrop aims make AI model training accessible and  for businesses of all size
 
 ## Getting Started
 
-To started with BrainDrop, follow these steps:
+To get started with BrainDrop, follow these steps:
 1. Sign up for an account on [our website](https://braindrop.me).
-2. Upload to the platform.
+2. Upload your data to the platform.
 3. Select the AI model type you want to train.
 4. Configure the training parameters and start the training process.
 5. Evaluate the trained model and deploy it to your application.
