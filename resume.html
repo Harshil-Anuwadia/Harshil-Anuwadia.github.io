@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Preview</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #pdf-viewer {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .download-link {
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            position: relative;
+        }
+        .spinner {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pdf-viewer"></div>
+    <p class="download-link">
+        If the PDF is not displaying, <a href="resume.pdf" target="_blank">click here to download or open it manually</a>.
+    </p>
+    <div class="spinner" id="spinner">Loading...</div>
+
+    <script>
+        const url = 'resume.pdf';
+        const pdfViewer = document.getElementById('pdf-viewer');
+        const spinner = document.getElementById('spinner');
+
+        // Show spinner while loading
+        spinner.style.display = 'block';
+
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            spinner.style.display = 'none'; // Hide spinner when loading is done
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                pdf.getPage(pageNum).then(page => {
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+
+                    // Scale for better clarity
+                    const scale = window.innerWidth < 768 ? 1.5 : 2.0;
+                    const viewport = page.getViewport({ scale: scale });
+
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    pdfViewer.appendChild(canvas);
+
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext);
+                }).catch(err => {
+                    console.error('Error rendering page:', err);
+                });
+            }
+        }).catch(err => {
+            spinner.style.display = 'none'; // Hide spinner if error occurs
+            console.error('Error loading PDF:', err);
+            pdfViewer.innerHTML = '<p>Error loading PDF. Please try again later.</p>';
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowDown') {
+                pdfViewer.scrollBy(0, 100); // Scroll down
+            } else if (event.key === 'ArrowUp') {
+                pdfViewer.scrollBy(0, -100); // Scroll up
+            }
+        });
+    </script>
+</body>
+</html>
