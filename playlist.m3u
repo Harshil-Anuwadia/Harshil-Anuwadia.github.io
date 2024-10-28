@@ -1,2 +1,183 @@
 #EXTM3U x-tvg-url="https://www.tsepg.cf/epg.xml.gz"
 
+#EXTINF:-1 tvg-id="22" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-52679-k7zx7qqg-v1/imageContent-52679-k7zx7qqg-m2.png" group-title="Lifestyle",News World India
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=22
+https://delta31tatasky.akamaized.net/out/i/57073.mpd
+
+#EXTINF:-1 tvg-id="840" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-56386-kfc14w60-v4/imageContent-56386-kfc14w60-m4.png" group-title="Spiritual",Shirdi Sai Baba
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=840
+https://delta45tatasky.akamaized.net/out/i/554.mpd
+
+#EXTINF:-1 tvg-id="121" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-405-j5jr3sz4-v2/imageContent-405-j5jr3sz4-m2.png" group-title="Lifestyle",Tata Play Fitness
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=121
+https://bpprod4live.akamaized.net/bpk-tv/irdeto_com_Channel_209/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="618" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12282-ja02jlp4-v2/imageContent-12282-ja02jlp4-m2.png" group-title="Lifestyle",Tata Play Beauty
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=618
+https://bpprod5live.akamaized.net/bpk-tv/irdeto_com_Channel_853/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="641" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-23495-jf92iycg-v3/imageContent-23495-jf92iycg-m4.png" group-title="Lifestyle",Tata Play Cooking
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=641
+https://bpprod5live.akamaized.net/bpk-tv/irdeto_com_Channel_876/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="842" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-56389-kfdgngts-v3/imageContent-56389-kfdgngts-m3.png" group-title="Spiritual",Somnath Temple
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=842
+https://delta45tatasky.akamaized.net/out/i/722.mpd
+
+#EXTINF:-1 tvg-id="959" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-67692-kwmxxw08-v2/imageContent-67692-kwmxxw08-m3.png" group-title="Entertainment",Tata Play Romance
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=959
+https://bpprod3live.akamaized.net/bpk-tv/irdeto_com_Channel_1785/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="8" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-25307-jhrhflww-v1/imageContent-25307-jhrhflww-m1.png" group-title="Entertainment",STAR Plus HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=8
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_257/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="244" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-6895-j6vqhqnc-v2/imageContent-6895-j6vqhqnc-m2.png" group-title="Entertainment",Star Bharat HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=244
+https://bpprod6live.akamaized.net/bpk-tv/irdeto_com_Channel_411/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="15" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-43-j5fca4k0-v3/imageContent-43-j5fca4k0-m4.png" group-title="Entertainment",SET HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=15
+https://bpprod6live.akamaized.net/bpk-tv/irdeto_com_Channel_300/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="556" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12074-j9oat6qw-v6/imageContent-12074-j9oat6qw-m6.png" group-title="Entertainment",SET
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=556
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_125/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="48" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-141-j5fpeji0-v3/imageContent-141-j5fpeji0-m3.png" group-title="Entertainment",SONY SAB HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=48
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_307/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="559" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12081-j9oc38xc-v8/imageContent-12081-j9oc38xc-m7.png" group-title="Entertainment",SONY SAB
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=559
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_126/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="40" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-117-j5fl7440-v1/imageContent-117-j5fl7440-m1.png" group-title="Entertainment",&tv HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=40
+https://bpprod4live.akamaized.net/bpk-tv/irdeto_com_Channel_303/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="578" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12129-j9p7kluo-v2/imageContent-12129-j9p7kluo-m3.png" group-title="Entertainment",&TV
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=578
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_196/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="557" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12077-j9ob4gm0-v2/imageContent-12077-j9ob4gm0-m2.png" group-title="Entertainment",Zee TV
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=557
+https://bpprod6live.akamaized.net/bpk-tv/irdeto_com_Channel_182/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="63" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11073-j95e7nyo-v1/imageContent-11073-j95e7nyo-m1.png" group-title="Entertainment",Zee TV HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=63
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_258/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="811" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-52369-k7e829a0-v5/imageContent-52369-k7e829a0-m5.png" group-title="Entertainment",Tata Play Adbhut Kahaniyan
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=811
+https://bpprod3live.akamaized.net/bpk-tv/irdeto_com_Channel_1108/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="52" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-155-j5frd2uo-v1/imageContent-155-j5frd2uo-m1.png" group-title="Entertainment",Colors HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=52
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_299/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="543" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12053-j9o3yhko-v1/imageContent-12053-j9o3yhko-m1.png" group-title="Entertainment",Colors
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=543
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_101/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="95" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-304-j5ji9otc-v2/imageContent-304-j5ji9otc-m2.png" group-title="Entertainment",Tata Play Javed Akhtar
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=95
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_192/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="943" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-65443-kty2tkwo-v2/imageContent-65443-kty2tkwo-m2.png" group-title="Entertainment",Tata Play Videshi Kahaniyan
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=943
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_1774/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="964" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/TPCTV_Thumbnail-v4/TPCTV_Thumbnail.png" group-title="Entertainment",Tata Play Classic TV
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=964
+https://bpprod5live.akamaized.net/bpk-tv/irdeto_com_Channel_1790/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="142" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-475-j5jx44s8-v1/imageContent-475-j5jx44s8-m1.png" group-title="Entertainment",UTV Bindass
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=142
+https://bpprod5live.akamaized.net/bpk-tv/irdeto_com_Channel_103/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="986" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-70821-l3edt8uw-v1/imageContent-70821-l3edt8uw-m3.png" group-title="Entertainment",Tata Play Zindagi
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=986
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_1813/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="1276" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/INVESTDISHD_Thumbnail-v1/INVESTDISHD_Thumbnail.png" group-title="Entertainment",Investigation Discovery HD
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=1276
+https://bpprod5live.akamaized.net/bpk-tv/irdeto_com_Channel_2056/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="633" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-49002-k5cch1cg-v2/imageContent-49002-k5cch1cg-m5.png" group-title="Entertainment",Investigation Discovery
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=633
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_867/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="551" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12060-j9o91vfc-v2/imageContent-12060-j9o91vfc-m2.png" group-title="Entertainment",STAR Utsav
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=551
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_122/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="523" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11969-j9luigc0-v2/imageContent-11969-j9luigc0-m2.png" group-title="Entertainment",Zee Anmol
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=523
+https://bpprod3live.akamaized.net/bpk-tv/irdeto_com_Channel_826/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="438" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/RIS_Thumbnail-v3/RIS_Thumbnail.png" group-title="Entertainment",Colors Rishtey
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=438
+https://bpprod7live.akamaized.net/bpk-tv/irdeto_com_Channel_694/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="554" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12071-j9oa4gbc-v5/imageContent-12071-j9oa4gbc-m4.png" group-title="Entertainment",Sony Pal
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=554
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_193/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="54" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-150-j5frd0jc-v3/imageContent-150-j5frd0jc-m5.png" group-title="Entertainment",The Q
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=54
+https://bpprod4live.akamaized.net/bpk-tv/irdeto_com_Channel_274/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="297" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11266-j9j2spmg-v1/imageContent-11266-j9j2spmg-m1.png" group-title="Entertainment",Big Magic
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=297
+https://bpprod6live.akamaized.net/bpk-tv/irdeto_com_Channel_476/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="51" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-158-j5frd560-v2/imageContent-158-j5frd560-m3.png" group-title="Entertainment",Dangal
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=51
+https://bpprod4live.akamaized.net/bpk-tv/irdeto_com_Channel_351/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="180" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-765-j5m2mbjk-v2/imageContent-765-j5m2mbjk-m2.png" group-title="Entertainment",Anjan TV
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=180
+https://bpprod2live.akamaized.net/bpk-tv/irdeto_com_Channel_370/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="818" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-52945-ka1wdss8-v2/imageContent-52945-ka1wdss8-m2.png" group-title="Entertainment",Shemaroo TV
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=http://127.0.0.1:8080/tataplay/wv-license.php?id=818
+https://bpprod6live.akamaized.net/bpk-tv/irdeto_com_Channel_1114/output/manifest.mpd
+
+#EXTINF:-1 tvg-id="874" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/
